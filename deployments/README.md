@@ -24,4 +24,15 @@ kubectl rollout pause deploy hello-deploy
 kubectl describe deploy hello-deploy
 kubectl rollout resume deploy hello-deploy
 kubectl get deploy hello-deploy
+
+kubectl rollout history deployment hello-deploy
+kubectl get rs
+kubectl describe rs hello-deploy-85fb59464d
+kubectl rollout undo deployment hello-deploy --to-revision=1
+kubectl get deploy hello-deploy
+kubectl describe deploy hello-deploy
+kubectl describe rs hello-deploy-85fb59464d
+kubectl get pods --show-labels
+kubectl delete -f deploy.yml
+kubectl delete -f lb.yml
 ```
