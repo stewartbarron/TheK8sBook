@@ -11,6 +11,6 @@ kubectl delete svc svc-test
 kubectl apply -f lb.yml
 kubectl get svc cloud-lb
 kubectl get endpointslices
-kubectl describe endpointslice cloud-lb-7rx7x
+kubectl describe endpointslice cloud-lb-m6jk9
 kubectl delete -f deploy.yml -f lb.yml
 ```
